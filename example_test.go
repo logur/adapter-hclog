@@ -1,12 +1,13 @@
 package hclog_test
 
 import (
+	"github.com/hashicorp/go-hclog"
+
 	hclogadapter "logur.dev/adapter/hclog"
 )
 
 func ExampleNew() {
-	var l interface{}
-	logger := hclogadapter.New(l)
+	logger := hclogadapter.New(hclog.Default())
 
 	// Output:
 	_ = logger

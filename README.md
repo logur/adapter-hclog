@@ -21,11 +21,12 @@ go get logur.dev/adapter/hclog
 package main
 
 import (
+	"github.com/hashicorp/go-hclog"
 	hclogadapter "logur.dev/adapter/hclog"
 )
 
 func main() {
-	logger := hclogadapter.New(/*logger*/)
+	logger := hclogadapter.New(hclog.Default())
 }
 ```
 
