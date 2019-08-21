@@ -1,12 +1,12 @@
-package template_test
+package hclog_test
 
 import (
-	templateadapter "logur.dev/adapter/template"
+	hclogadapter "logur.dev/adapter/hclog"
 )
 
 func ExampleNew() {
 	var l interface{}
-	logger := templateadapter.New(l)
+	logger := hclogadapter.New(l)
 
 	// Output:
 	_ = logger
@@ -14,7 +14,7 @@ func ExampleNew() {
 
 // If logger is nil, a default instance is created.
 func ExampleNew_default() {
-	logger := templateadapter.New(nil)
+	logger := hclogadapter.New(nil)
 
 	// Output:
 	_ = logger

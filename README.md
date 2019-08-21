@@ -1,17 +1,17 @@
-# Logur adapter for TEMPLATE
+# Logur adapter for [hclog](https://github.com/hashicorp/go-hclog)
 
-[![CircleCI](https://circleci.com/gh/logur/adapter-template.svg?style=svg)](https://circleci.com/gh/logur/adapter-template)
-[![Coverage](https://gocover.io/_badge/logur.dev/adapter/template)](https://gocover.io/logur.dev/adapter/template)
-[![Go Report Card](https://goreportcard.com/badge/logur.dev/adapter/template?style=flat-square)](https://goreportcard.com/report/logur.dev/adapter/template)
-[![GolangCI](https://golangci.com/badges/github.com/logur/adapter-template.svg)](https://golangci.com/r/github.com/logur/adapter-template)
-[![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/adapter-template)
-[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/logur.dev/adapter/template)
+[![CircleCI](https://circleci.com/gh/logur/adapter-hclog.svg?style=svg)](https://circleci.com/gh/logur/adapter-hclog)
+[![Coverage](https://gocover.io/_badge/logur.dev/adapter/hclog)](https://gocover.io/logur.dev/adapter/hclog)
+[![Go Report Card](https://goreportcard.com/badge/logur.dev/adapter/hclog?style=flat-square)](https://goreportcard.com/report/logur.dev/adapter/hclog)
+[![GolangCI](https://golangci.com/badges/github.com/logur/adapter-hclog.svg)](https://golangci.com/r/github.com/logur/adapter-hclog)
+[![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/adapter-hclog)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/logur.dev/adapter/hclog)
 
 
 ## Installation
 
 ```bash
-go get logur.dev/adapter/template
+go get logur.dev/adapter/hclog
 ```
 
 
@@ -21,11 +21,11 @@ go get logur.dev/adapter/template
 package main
 
 import (
-	templateadapter "logur.dev/adapter/template"
+	hclogadapter "logur.dev/adapter/hclog"
 )
 
 func main() {
-	logger := templateadapter.New(/*logger*/)
+	logger := hclogadapter.New(/*logger*/)
 }
 ```
 
