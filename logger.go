@@ -2,8 +2,8 @@
 package hclog
 
 import (
-	"github.com/goph/logur"
 	"github.com/hashicorp/go-hclog"
+	"logur.dev/logur"
 
 	"logur.dev/adapter/hclog/internal/keyvals"
 )

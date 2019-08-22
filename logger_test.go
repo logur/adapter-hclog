@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/goph/logur"
-	"github.com/goph/logur/logtesting"
 	"github.com/hashicorp/go-hclog"
+	"logur.dev/logur"
+	"logur.dev/logur/logtesting"
 )
 
 // nolint: gochecknoglobals
