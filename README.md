@@ -1,7 +1,7 @@
 # Logur adapter for [hclog](https://github.com/hashicorp/go-hclog)
 
-[![CircleCI](https://circleci.com/gh/logur/adapter-hclog.svg?style=svg)](https://circleci.com/gh/logur/adapter-hclog)
-[![Coverage](https://gocover.io/_badge/logur.dev/adapter/hclog)](https://gocover.io/logur.dev/adapter/hclog)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/logur/adapter-hclog/CI?style=flat-square)
+[![Codecov](https://img.shields.io/codecov/c/github/logur/adapter-hclog?style=flat-square)](https://codecov.io/gh/logur/adapter-hclog)
 [![Go Report Card](https://goreportcard.com/badge/logur.dev/adapter/hclog?style=flat-square)](https://goreportcard.com/report/logur.dev/adapter/hclog)
 [![GolangCI](https://golangci.com/badges/github.com/logur/adapter-hclog.svg)](https://golangci.com/r/github.com/logur/adapter-hclog)
 [![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/adapter-hclog)
@@ -35,7 +35,7 @@ func main() {
 
 When all coding and testing is done, please run the test suite:
 
-``` bash
+```bash
 $ make check
 ```
 
