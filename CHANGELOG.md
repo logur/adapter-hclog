@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.4.0] - 2020-01-16
 
+### Added
+
+- Logger context support
+
 
 ## [0.3.0] - 2020-01-10
 
