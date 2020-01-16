@@ -8,22 +8,22 @@ import (
 
 	"github.com/hashicorp/go-hclog"
 	"logur.dev/logur"
-	"logur.dev/logur/logtesting"
+	"logur.dev/logur/conformance"
 )
 
 // nolint: gochecknoglobals
 var logLineRegex = regexp.MustCompile(`.* \[(.*)\] {1,2}(.*): (.*)`)
 
-func newTestSuite() *logtesting.LoggerTestSuite {
-	return &logtesting.LoggerTestSuite{
-		LoggerFactory: func(level logur.Level) (logur.Logger, func() []logur.LogEvent) {
+func TestLogger(t *testing.T) {
+	suite := conformance.TestSuite{
+		LoggerFactory: func(level logur.Level) (logur.Logger, conformance.TestLogger) {
 			var buf bytes.Buffer
 			logger := hclog.New(&hclog.LoggerOptions{
 				Level:  hclog.Level(level + 1),
 				Output: &buf,
 			})
 
-			return New(logger), func() []logur.LogEvent {
+			return New(logger), conformance.TestLoggerFunc(func() []logur.LogEvent {
 				lines := strings.Split(strings.TrimSuffix(buf.String(), "\n"), "\n")
 
 				events := make([]logur.LogEvent, len(lines))
@@ -50,11 +50,9 @@ func newTestSuite() *logtesting.LoggerTestSuite {
 				}
 
 				return events
-			}
+			})
 		},
 	}
-}
 
-func TestLoggerSuite(t *testing.T) {
-	newTestSuite().Execute(t)
+	suite.Run(t)
 }
